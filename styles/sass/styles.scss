@@ -1,2 +1,7 @@
+// Full site partials
 @use "./setup.scss";
-@use "./variables"
+@use "./variables";
+@use "./typography";
+
+// Section partials
+@use "./sections/header";
