@@ -1,0 +1,40 @@
+@use "variables";
+
+h1,
+h2 {
+    font-family: variables.$text-heading;
+    font-weight: 400;
+}  
+
+h1 {
+    font-size: 12rem;
+    line-height: 11.7rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 5.1rem;
+}
+
+h3,
+a,
+button {
+    font-family: variables.$text-semibold; 
+    font-weight: 600;
+}
+
+p {
+    font-family: variables.$text-light;
+    font-weight: 300;
+}
+
+h1,
+a {
+    color: variables.$color-white;
+}
+
+a {
+    font-size: 2.2rem;
+    line-height: 2.9rem;
+    text-transform: uppercase;
+}
