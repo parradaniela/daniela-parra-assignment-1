@@ -344,16 +344,6 @@ header {
   background-repeat: no-repeat;
 }
 
-.header-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 h1 {
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -375,13 +365,6 @@ h1 {
 }
 
 .header-socials ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -473,4 +456,43 @@ h1 {
   margin: 20px 0;
   height: 80px;
   width: 100%;
+}
+
+article {
+  background-color: #141414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+article .half-container {
+  width: 50%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+article .half-container-text {
+  padding: 5%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+article .half-container-text h2,
+article .half-container-text p {
+  color: #152D20;
+}
+article .half-container-text a {
+  background-color: #152D20;
+  padding: 20px;
+  width: 40%;
+  text-align: center;
+}
+article .flipped {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+article:hover {
+  background-color: #C3D3CB;
 }

@@ -1,0 +1,37 @@
+@use "../variables";
+
+article {
+        background-color: #141414;
+        display: flex;
+        transition: .5s;
+        
+        .half-container {
+            width: 50%;
+            order: 1;   
+            
+            &-text {
+                padding: 5%;
+                justify-content: space-between;
+                
+                h2, 
+                p {
+                    color: variables.$color-primary-dark;
+                }
+
+                a {
+                    background-color: variables.$color-primary-dark;
+                    padding: 20px;
+                    width: 40%;
+                    text-align: center;
+                }
+            }
+        }
+
+        .flipped {
+           order: 2; 
+        }
+
+        &:hover {
+            background-color: variables.$color-primary-light;
+        }
+    }
