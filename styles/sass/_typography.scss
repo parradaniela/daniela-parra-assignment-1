@@ -21,10 +21,10 @@ p {
 }
 
 // Font size
+
 h1 {
     font-size: 12rem;
     line-height: 11.7rem;
-    text-transform: uppercase;
 }
 
 h2 {
@@ -39,10 +39,15 @@ p {
 a {
     font-size: 2.2rem;
     line-height: 2.9rem;
-    text-transform: uppercase;
 }
 
-// Font colours
+// Font design
+
+h1,
+h2,
+a {
+    text-transform: uppercase;
+}
 
 h1,
 h2,

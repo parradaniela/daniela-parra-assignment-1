@@ -264,6 +264,8 @@ svg {
 
 img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 h1,
@@ -287,7 +289,6 @@ p {
 h1 {
   font-size: 12rem;
   line-height: 11.7rem;
-  text-transform: uppercase;
 }
 
 h2 {
@@ -302,6 +303,11 @@ p {
 a {
   font-size: 2.2rem;
   line-height: 2.9rem;
+}
+
+h1,
+h2,
+a {
   text-transform: uppercase;
 }
 
@@ -400,10 +406,6 @@ h1 span {
   width: calc(35% - 100px);
   margin-right: 100px;
 }
-.stories-img img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 .stories-text {
   width: calc(65% - 100px);
   display: -webkit-box;
@@ -426,4 +428,24 @@ h1 span {
   width: 30%;
   padding: 15px;
   text-align: center;
+}
+
+.gallery {
+  background-color: #C3D3CB;
+}
+.gallery h2 {
+  color: #152D20;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.gallery h2 span {
+  display: block;
+}
+.gallery-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.gallery-container li:not(:last-child) {
+  margin-right: 40px;
 }
