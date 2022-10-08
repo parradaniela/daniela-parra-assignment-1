@@ -1,0 +1,29 @@
+@use "../variables";
+
+.additional-pages {
+    background-color: variables.$color-primary-dark;
+
+    &-nav ul {
+        display: flex;
+        justify-content: space-around;
+
+        li {
+            width: 20%;
+            padding: 10px;
+            text-align: center;
+
+            a {
+                font-size: 3.5rem;
+                line-height: 1.1;
+            }
+        }
+
+
+        svg {
+            display: block;
+            margin: variables.$text-margin-small;
+            height: 80px;
+            width: 100%;
+        }
+    }
+}

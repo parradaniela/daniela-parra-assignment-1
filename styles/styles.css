@@ -332,6 +332,10 @@ a {
   padding: 10rem 0;
 }
 
+.block-span {
+  display: block;
+}
+
 header {
   background-image: url(../animal-land-assets/image-1.jpg);
   background-size: cover;
@@ -354,9 +358,6 @@ h1 {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin: 13rem 0;
-}
-h1 span {
-  display: block;
 }
 
 .header-nav ul {
@@ -434,12 +435,10 @@ h1 span {
   background-color: #C3D3CB;
 }
 .gallery h2 {
+  font-size: 4.9rem;
   color: #152D20;
   text-align: center;
   margin-bottom: 50px;
-}
-.gallery h2 span {
-  display: block;
 }
 .gallery-container {
   display: -webkit-box;
@@ -448,4 +447,30 @@ h1 span {
 }
 .gallery-container li:not(:last-child) {
   margin-right: 40px;
+}
+
+.additional-pages {
+  background-color: #152D20;
+}
+.additional-pages-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.additional-pages-nav ul li {
+  width: 20%;
+  padding: 10px;
+  text-align: center;
+}
+.additional-pages-nav ul li a {
+  font-size: 3.5rem;
+  line-height: 1.1;
+}
+.additional-pages-nav ul svg {
+  display: block;
+  margin: 20px 0;
+  height: 80px;
+  width: 100%;
 }
