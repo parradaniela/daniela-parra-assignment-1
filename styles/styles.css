@@ -262,20 +262,14 @@ svg {
   fill: #FCFCFC;
 }
 
+img {
+  width: 100%;
+}
+
 h1,
 h2 {
   font-family: "Fredericka the Great", cursive;
   font-weight: 400;
-}
-
-h1 {
-  font-size: 12rem;
-  line-height: 11.7rem;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-size: 5.1rem;
 }
 
 h3,
@@ -290,15 +284,46 @@ p {
   font-weight: 300;
 }
 
-h1,
-a {
-  color: #FCFCFC;
+h1 {
+  font-size: 12rem;
+  line-height: 11.7rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 5.1rem;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 2.9rem;
 }
 
 a {
   font-size: 2.2rem;
   line-height: 2.9rem;
   text-transform: uppercase;
+}
+
+h1,
+h2,
+p,
+a {
+  color: #FCFCFC;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-padding {
+  padding: 10rem 0;
 }
 
 header {
@@ -342,9 +367,6 @@ h1 span {
   padding: 2rem;
 }
 
-.header-socials {
-  height: 20vh;
-}
 .header-socials ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -364,4 +386,44 @@ h1 span {
   width: 3rem;
   height: 3rem;
   padding: 1.5rem;
+}
+
+.stories {
+  background-color: #152D20;
+}
+.stories-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.stories-img {
+  width: calc(35% - 100px);
+  margin-right: 100px;
+}
+.stories-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.stories-text {
+  width: calc(65% - 100px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.stories p {
+  margin: 20px 0;
+}
+.stories a {
+  background-color: #FCFCFC;
+  color: #152D20;
+  width: 30%;
+  padding: 15px;
+  text-align: center;
 }

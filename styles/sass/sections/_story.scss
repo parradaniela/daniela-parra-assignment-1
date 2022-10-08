@@ -1,0 +1,38 @@
+@use "../variables";
+
+.stories {
+    background-color: variables.$color-primary-dark;
+    
+    &-container {
+        display: flex;
+        }
+    
+    &-img {
+            width: calc(35% - 100px);
+            margin-right: 100px;
+    
+            img {
+                object-fit: cover;
+            }
+        }
+    
+    &-text {
+            width: calc(65% - 100px);
+            display: flex; 
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        p {
+            margin: variables.$text-margin-small;
+        }
+
+        a {
+            background-color: variables.$color-white;
+            color: variables.$color-primary-dark;
+            width: 30%;
+            padding: 15px;
+            text-align: center;
+        }
+}
+

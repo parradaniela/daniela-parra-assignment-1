@@ -2,6 +2,8 @@
 @use "./setup.scss";
 @use "./variables";
 @use "./typography";
+@use "./utilities";
 
 // Section partials
 @use "./sections/header";
+@use "./sections/story"
