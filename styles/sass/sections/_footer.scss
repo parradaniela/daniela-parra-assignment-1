@@ -1,0 +1,68 @@
+@use "../variables";
+
+footer {
+    background-color: variables.$color-primary-dark;
+}
+
+aside {
+    background-color: variables.$color-black;
+    text-align: center;
+}
+
+.footer {
+
+    &-flex {
+        @include variables.flex-space-between;
+    }
+
+    &-nav {
+        width: 15%;
+
+        a {
+            display: inline-block;
+            padding: 10px 10px 10px 0;
+            transition: all .4s;
+
+            &:hover {
+                @include variables.anchor-text-hover;
+            }
+        }
+
+    }
+
+    &-form {
+
+        width: 60%;
+        margin: 0 50px;
+        text-align: center;
+         
+        legend {
+            margin: 20px auto;
+
+        }
+    
+        &-flex {
+            display: flex;
+    
+            input {
+                padding: 10px;
+                width: 70%;
+            }
+    
+            button {
+                width: 30%;
+                padding: 10px;
+                background-color: variables.$color-black;
+            }
+        }
+    }
+
+    &-contact {
+        width: 25%;
+        text-align: right;
+
+        ul {
+            margin: variables.$text-margin-small;
+        }
+    }
+}

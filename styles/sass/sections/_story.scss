@@ -14,9 +14,8 @@
     
     &-text {
             width: calc(65% - 100px);
-            display: flex; 
+            @include variables.flex-space-between;
             flex-direction: column;
-            justify-content: space-between;
         }
         
         p {

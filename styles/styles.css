@@ -243,7 +243,8 @@ ul,
 li,
 a,
 p,
-button {
+button,
+fieldset {
   margin: 0;
   padding: 0;
 }
@@ -254,6 +255,12 @@ li {
 
 a {
   text-decoration: none;
+}
+
+fieldset,
+button,
+input {
+  border: none;
 }
 
 svg {
@@ -281,7 +288,9 @@ button {
   font-weight: 600;
 }
 
-p {
+p,
+legend,
+input {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
 }
@@ -295,26 +304,38 @@ h2 {
   font-size: 5.1rem;
 }
 
-p {
+h3 {
+  font-size: 3.5rem;
+}
+
+p,
+legend,
+input {
   font-size: 2rem;
   line-height: 2.9rem;
 }
 
-a {
+a,
+button {
   font-size: 2.2rem;
   line-height: 2.9rem;
 }
 
 h1,
 h2,
-a {
+h3,
+a,
+button {
   text-transform: uppercase;
 }
 
 h1,
 h2,
+h3,
 p,
-a {
+a,
+legend,
+button {
   color: #FCFCFC;
 }
 
@@ -354,14 +375,20 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 33%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 33%;
   margin: 2rem 0;
 }
 .header-nav ul a {
   padding: 2rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.header-nav ul a:hover {
+  font-size: 3rem;
+  border-bottom: solid 1px #FCFCFC;
 }
 
 .header-socials ul {
@@ -395,13 +422,13 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 .stories p {
   margin: 20px 0;
@@ -495,4 +522,64 @@ article .flipped {
 }
 article:hover {
   background-color: #C3D3CB;
+}
+
+footer {
+  background-color: #152D20;
+}
+
+aside {
+  background-color: #000000;
+  text-align: center;
+}
+
+.footer-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer-nav {
+  width: 15%;
+}
+.footer-nav a {
+  display: inline-block;
+  padding: 10px 10px 10px 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+.footer-nav a:hover {
+  font-size: 3rem;
+  border-bottom: solid 1px #FCFCFC;
+}
+.footer-form {
+  width: 60%;
+  margin: 0 50px;
+  text-align: center;
+}
+.footer-form legend {
+  margin: 20px auto;
+}
+.footer-form-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer-form-flex input {
+  padding: 10px;
+  width: 70%;
+}
+.footer-form-flex button {
+  width: 30%;
+  padding: 10px;
+  background-color: #000000;
+}
+.footer-contact {
+  width: 25%;
+  text-align: right;
+}
+.footer-contact ul {
+  margin: 20px 0;
 }

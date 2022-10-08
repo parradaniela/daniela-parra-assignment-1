@@ -16,13 +16,19 @@ h1 {
 .header-nav {
 
     ul {
-        display: flex;
+        @include variables.flex-space-between;
         width: 33%;
-        justify-content: space-between;
         margin: 2rem 0;
 
         a {
             padding: 2rem;
+            transition: all .4s;
+
+            // @include variables.anchor-text-hover;
+
+            &:hover {
+                @include variables.anchor-text-hover;
+            }
         }
     }
 }

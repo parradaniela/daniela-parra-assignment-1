@@ -13,3 +13,15 @@ $text-light: 'Roboto', sans-serif;
 
 // Spacing
 $text-margin-small: 20px 0;
+
+// Mixins
+
+@mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin anchor-text-hover {
+        font-size: 3rem;
+        border-bottom: solid 1px $color-white;
+}
