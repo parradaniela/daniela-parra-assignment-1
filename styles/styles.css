@@ -519,10 +519,23 @@ h1 {
   display: -ms-flexbox;
   display: flex;
 }
-.gallery-container li:not(:last-child) {
-  margin-right: 40px;
+.gallery-container li:nth-child(2) {
+  margin: 0 40px;
 }
 
+@media (max-width: 1000px) {
+  .gallery-container li:last-child {
+    display: none;
+  }
+  .gallery-container li:nth-child(2) {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 770px) {
+  .gallery-container li:nth-child(2) {
+    margin-left: 10px;
+  }
+}
 .additional-pages {
   background-color: #152D20;
 }

@@ -13,9 +13,28 @@
     &-container {
         display: flex;
 
-        li:not(:last-child) {
-            margin-right: 40px;
+        li:nth-child(2) {
+            margin: 0 40px;
         }
+    }
+}
+
+@media (max-width: 1000px) {
+    .gallery-container {
+
+        li:last-child {
+            display: none;
+        }
+        
+        li:nth-child(2) {
+            margin-right: 0px;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .gallery-container li:nth-child(2) {
+        margin-left: 10px;
     }
 }
 
