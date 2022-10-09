@@ -10,3 +10,11 @@
 .block-span {
     display: block;
 }
+
+// Media queries
+
+@media (max-width: 1020px) {
+    .section-padding {
+        padding: 7rem 0;
+    }   
+}

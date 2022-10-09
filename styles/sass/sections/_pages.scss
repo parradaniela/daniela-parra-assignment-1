@@ -8,15 +8,13 @@
         justify-content: space-around;
 
         li {
-            width: 20%;
+            width: 30%;
             padding: 10px;
             text-align: center;
-            border-bottom: 3px solid variables.$color-primary-dark;
             transition: .3s;
 
             &:hover,
             &:focus-within {
-                border-bottom: 5px solid variables.$color-white;
                 transform: scale(1.2);
             }
 
@@ -34,5 +32,30 @@
             height: 80px;
             width: 100%;
         }
+    }
+}
+
+//Media queries
+
+@media (max-width: 1018px) {
+    .additional-pages-nav ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        li {
+            margin: 10px 0;
+            width: 50%;
+          
+            
+            a {
+                font-size: 3rem;
+            }
+
+        }
+        
+        // svg {
+        //     height: 70px;
+        // }
     }
 }
