@@ -26,7 +26,8 @@ h1 {
 
             // @include variables.anchor-text-hover;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 @include variables.anchor-text-hover;
             }
         }

@@ -23,5 +23,16 @@ $text-margin-small: 20px 0;
 
 @mixin anchor-text-hover {
         font-size: 3rem;
-        border-bottom: solid 1px $color-white;
+}
+
+@mixin button-styles($back-color, $padding, $width) {
+    background-color: $back-color;
+    padding: $padding;
+    width: $width;
+    text-align: center;
+}
+
+@mixin button-hover($back-color, $text-color) {
+    background-color: $back-color;
+    color: $text-color;
 }

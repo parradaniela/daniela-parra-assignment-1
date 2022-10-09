@@ -1,11 +1,11 @@
 @use "../variables";
 
 article {
-        background-color: #141414;
-        display: flex;
-        transition: .5s;
-        
-        .half-container {
+    display: flex;
+    transition: .5s;
+    background-color: #141414;
+    
+    .half-container {
             width: 50%;
             order: 1;   
             
@@ -19,19 +19,25 @@ article {
                 }
 
                 a {
-                    background-color: variables.$color-primary-dark;
-                    padding: 20px;
-                    width: 40%;
-                    text-align: center;
+                    @include variables.button-styles(variables.$color-primary-dark, 20px, 40%);
+                    transition: .5s;
+
+                    &:hover,
+                    &:focus {
+                        @include variables.button-hover(variables.$color-black, variables.$color-white);
+                    }
                 }
             }
+            
+            &.flipped {
+                order: 2; 
+            }
         }
+        
+        
+    &:hover,
+    &:focus-within {
+        background-color: variables.$color-white;
+    }         
+}
 
-        .flipped {
-           order: 2; 
-        }
-
-        &:hover {
-            background-color: variables.$color-primary-light;
-        }
-    }

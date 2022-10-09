@@ -11,10 +11,19 @@
             width: 20%;
             padding: 10px;
             text-align: center;
+            border-bottom: 3px solid variables.$color-primary-dark;
+            transition: .3s;
+
+            &:hover,
+            &:focus-within {
+                border-bottom: 5px solid variables.$color-white;
+                transform: scale(1.2);
+            }
 
             a {
                 font-size: 3.5rem;
                 line-height: 1.1;
+
             }
         }
 

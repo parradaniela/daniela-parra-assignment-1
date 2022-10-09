@@ -386,9 +386,8 @@ h1 {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-.header-nav ul a:hover {
+.header-nav ul a:hover, .header-nav ul a:focus {
   font-size: 3rem;
-  border-bottom: solid 1px #FCFCFC;
 }
 
 .header-socials ul {
@@ -435,10 +434,16 @@ h1 {
 }
 .stories a {
   background-color: #FCFCFC;
-  color: #152D20;
-  width: 30%;
   padding: 15px;
+  width: 30%;
   text-align: center;
+  color: #152D20;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.stories a:hover, .stories a:focus {
+  background-color: #000000;
+  color: #FCFCFC;
 }
 
 .gallery {
@@ -473,6 +478,14 @@ h1 {
   width: 20%;
   padding: 10px;
   text-align: center;
+  border-bottom: 3px solid #152D20;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.additional-pages-nav ul li:hover, .additional-pages-nav ul li:focus-within {
+  border-bottom: 5px solid #FCFCFC;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .additional-pages-nav ul li a {
   font-size: 3.5rem;
@@ -486,12 +499,12 @@ h1 {
 }
 
 article {
-  background-color: #141414;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  background-color: #141414;
 }
 article .half-container {
   width: 50%;
@@ -514,14 +527,20 @@ article .half-container-text a {
   padding: 20px;
   width: 40%;
   text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
-article .flipped {
+article .half-container-text a:hover, article .half-container-text a:focus {
+  background-color: #000000;
+  color: #FCFCFC;
+}
+article .half-container.flipped {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
 }
-article:hover {
-  background-color: #C3D3CB;
+article:hover, article:focus-within {
+  background-color: #FCFCFC;
 }
 
 footer {
@@ -550,9 +569,8 @@ aside {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-.footer-nav a:hover {
+.footer-nav a:hover, .footer-nav a:focus {
   font-size: 3rem;
-  border-bottom: solid 1px #FCFCFC;
 }
 .footer-form {
   width: 60%;
@@ -572,9 +590,16 @@ aside {
   width: 70%;
 }
 .footer-form-flex button {
-  width: 30%;
-  padding: 10px;
   background-color: #000000;
+  padding: 10px;
+  width: 30%;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.footer-form-flex button:hover, .footer-form-flex button:focus {
+  background-color: #C3D3CB;
+  color: #000000;
 }
 .footer-contact {
   width: 25%;
