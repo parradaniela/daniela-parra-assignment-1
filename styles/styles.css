@@ -361,7 +361,7 @@ header {
   background-image: url(../animal-land-assets/image-1.jpg);
   background-size: cover;
   background-position: top;
-  height: 100vh;
+  min-height: 100vh;
   background-repeat: no-repeat;
 }
 
@@ -397,6 +397,12 @@ h1 {
 }
 .header-socials ul li {
   margin: 1.5rem 2.5% 1.5rem 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.header-socials ul li:hover, .header-socials ul li:focus-within {
+  -webkit-transform: scale(1.6);
+          transform: scale(1.6);
 }
 .header-socials ul li a {
   width: 3rem;
