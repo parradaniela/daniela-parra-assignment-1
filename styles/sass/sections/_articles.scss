@@ -78,15 +78,16 @@ article {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 707px) {
 
     .half-container {
         h2 {
             font-size: 4rem;
         }
-    }
-    .half-container-text {
-        text-align: center;
-        align-items: center;
+
+        &-text {
+            text-align: center;
+            align-items: center;
+        }
     }
 }

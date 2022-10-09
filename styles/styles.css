@@ -675,7 +675,7 @@ article:hover, article:focus-within {
             order: 1;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 707px) {
   .half-container h2 {
     font-size: 4rem;
   }
@@ -704,7 +704,7 @@ aside {
           justify-content: space-between;
 }
 .footer-nav {
-  width: 15%;
+  width: 17%;
 }
 .footer-nav a {
   display: inline-block;
@@ -717,7 +717,7 @@ aside {
 }
 .footer-form {
   width: 60%;
-  margin: 0 50px;
+  margin: 0 30px;
   text-align: center;
 }
 .footer-form legend {
@@ -745,9 +745,55 @@ aside {
   color: #000000;
 }
 .footer-contact {
-  width: 25%;
+  width: 23%;
   text-align: right;
 }
 .footer-contact ul {
   margin: 20px 0;
+}
+
+@media (max-width: 1100px) {
+  .footer-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer-nav {
+    width: 100%;
+  }
+  .footer-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .footer-form {
+    width: 100%;
+    margin: 40px 0;
+  }
+  .footer-form-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer-form-flex input {
+    margin: 20px 0;
+    width: 100%;
+  }
+  .footer-contact {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 795px) {
+  .footer-form-flex button {
+    width: 100%;
+  }
 }
