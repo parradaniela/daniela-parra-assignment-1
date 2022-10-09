@@ -18,6 +18,10 @@ article {
                     color: variables.$color-primary-dark;
                 }
 
+                p {
+                    margin: variables.$text-margin-small;
+                }
+
                 a {
                     @include variables.button-styles(variables.$color-primary-dark, 20px, 40%);
                     transition: .5s;
@@ -29,11 +33,10 @@ article {
                 }
             }
             
-            &.flipped {
+            .flipped {
                 order: 2; 
             }
-        }
-        
+        }       
         
     &:hover,
     &:focus-within {
@@ -41,7 +44,49 @@ article {
     }         
 }
 
+// Media queries
 
-@media (max-width: 1523px) {
-    
+@media (max-width: 1346px) {
+    article .half-container-text {
+        padding: 2%;
+    }
+}
+
+@media (max-width: 1165px) {
+    article {
+        display: flex; 
+        flex-direction: column;
+        background-color: variables.$color-white;
+
+        .half-container {
+            width: 100%;
+
+            &:first-child {
+                height: 50vh;
+                min-height: 400px;
+            }
+
+            &-text {
+                width: 90%;
+                margin: 5% auto;  
+            }
+
+            .flipped {
+                order: 1;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+
+    .half-container {
+        h2 {
+            font-size: 4rem;
+        }
+    }
+    .half-container-text {
+        text-align: center;
+        align-items: center;
+    }
 }

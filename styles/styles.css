@@ -618,6 +618,9 @@ article .half-container-text h2,
 article .half-container-text p {
   color: #152D20;
 }
+article .half-container-text p {
+  margin: 20px 0;
+}
 article .half-container-text a {
   background-color: #152D20;
   padding: 20px;
@@ -630,7 +633,7 @@ article .half-container-text a:hover, article .half-container-text a:focus {
   background-color: #000000;
   color: #FCFCFC;
 }
-article .half-container.flipped {
+article .half-container .flipped {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -639,6 +642,50 @@ article:hover, article:focus-within {
   background-color: #FCFCFC;
 }
 
+@media (max-width: 1346px) {
+  article .half-container-text {
+    padding: 2%;
+  }
+}
+@media (max-width: 1165px) {
+  article {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #FCFCFC;
+  }
+  article .half-container {
+    width: 100%;
+  }
+  article .half-container:first-child {
+    height: 50vh;
+    min-height: 400px;
+  }
+  article .half-container-text {
+    width: 90%;
+    margin: 5% auto;
+  }
+  article .half-container .flipped {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+@media (max-width: 600px) {
+  .half-container h2 {
+    font-size: 4rem;
+  }
+  .half-container-text {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 footer {
   background-color: #152D20;
 }
