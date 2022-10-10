@@ -374,6 +374,14 @@ header {
   min-height: 100vh;
   background-repeat: no-repeat;
 }
+header label,
+header input {
+  display: none;
+}
+header label {
+  width: 50px;
+  padding: 10px;
+}
 
 h1 {
   -ms-flex-item-align: end;
@@ -381,6 +389,8 @@ h1 {
   position: absolute;
   top: 20%;
   right: 5%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .header-nav {
@@ -436,6 +446,99 @@ h1 {
   padding: 15px;
 }
 
+@media (max-width: 1000px) {
+  header {
+    background-position: 40%;
+  }
+  header label {
+    display: block;
+    color: #FCFCFC;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    z-index: 10;
+    position: fixed;
+  }
+  header h1 {
+    font-size: 8rem;
+    line-height: 8rem;
+    left: 0;
+    top: 10%;
+  }
+  .slide-out {
+    position: fixed;
+    display: none;
+    right: -100%;
+    top: 8%;
+    z-index: 10;
+  }
+  input[type=checkbox]:checked + .slide-out {
+    right: 0;
+    display: block;
+  }
+  .header-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: auto;
+    width: 27%;
+    min-width: 300px;
+    border: 1px solid white;
+  }
+  .header-nav-top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  .header-nav-top a {
+    display: inline-block;
+    width: 100%;
+    border-bottom: 1px solid white;
+    margin: 5px 0;
+  }
+  .header-nav li {
+    width: 100%;
+  }
+  .header-socials ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .header-socials ul li {
+    margin: 5px 10px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    background-position: 35%;
+  }
+  .slide-out,
+.header-nav {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  header h1 {
+    font-size: 6rem;
+    line-height: 6rem;
+    position: static;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
 .stories {
   background-color: #152D20;
 }
@@ -811,13 +914,11 @@ aside {
     margin: 20px 0;
     width: 100%;
   }
+  .footer-form-flex button {
+    width: 100%;
+  }
   .footer-contact {
     width: 100%;
     text-align: center;
-  }
-}
-@media (max-width: 795px) {
-  .footer-form-flex button {
-    width: 100%;
   }
 }

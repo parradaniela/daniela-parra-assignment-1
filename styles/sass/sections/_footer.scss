@@ -100,17 +100,15 @@ aside {
                 margin: variables.$text-margin-small;
                 width: 100%;
             }
+            
+            button {
+                width: 100%;
+            }
         }
     }
 
     .footer-contact {
         width: 100%;
         text-align: center;
-    }
-}
-
-@media (max-width: 795px) {
-    .footer-form-flex button {
-        width: 100%;
     }
 }

@@ -6,6 +6,16 @@ header {
     background-position: top;
     min-height: 100vh;
     background-repeat: no-repeat;
+    
+    label,
+    input {
+        display: none;
+    }
+    
+    label {
+        width: 50px;
+        padding: 10px;
+    }
 }
 
 h1 {
@@ -13,24 +23,25 @@ h1 {
     position: absolute;
     top: 20%;
     right: 5%;
+    transition: .3s;
 }
 
 .header-nav {
-
+    
     @include variables.flex-space-between;
     min-height: 100vh;
     width: 100%;
     margin: 2rem 0;
-
+    
     &-top {
         width: 40%;
         @include variables.flex-space-between;
     }
-
+    
     a {
         padding: 2rem;
         transition: all .4s;
-
+        
         &:hover,
         &:focus {
             @include variables.anchor-text-hover;
@@ -42,7 +53,7 @@ h1 {
 
 .header-socials {
     align-self: flex-end;
-
+    
     ul {
         margin-right: -10px;
         margin-bottom: 40px;
@@ -50,7 +61,7 @@ h1 {
         li {
             margin: 15px;
             transition: .3s;
-
+            
             &:hover,
             &:focus-within {
                 transform: scale(1.6);
@@ -65,4 +76,105 @@ h1 {
         }
 
     }
+}
+
+// Media queries
+
+@media (max-width: 1000px) {
+
+    header {
+        background-position: 40%;
+
+        label {
+            display: block;
+            color: variables.$color-white;
+            align-self: flex-end;
+            z-index: 10;
+            position: fixed;
+        }
+        
+        h1 {
+            font-size: 8rem;
+            line-height: 8rem;
+            left: 0; 
+            top: 10%;
+        }
+    }
+
+    .slide-out {
+    position: fixed;
+    display: none;
+    right: -100%;
+    top: 8%;
+    z-index: 10;
+    
+    }
+
+
+    input[type="checkbox"]:checked + .slide-out {
+        right: 0;
+        display: block;
+    }
+
+    .header-nav {
+        flex-direction: column;
+        background-color: rgba(variables.$color-black, .7);
+        min-height: auto;
+        width: 27%;
+        min-width: 300px;
+        border: 1px solid white;
+        
+        &-top {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+
+            a {
+                display: inline-block;
+                width: 100%;
+                border-bottom: 1px solid white;
+                margin: 5px 0;
+            }
+        }
+        
+        li {
+            width: 100%;
+        }
+    }
+
+    .header-socials {
+        
+        ul {
+            flex-direction: row;
+            align-items: flex-start;
+            margin: 0 auto;
+            margin-bottom: 20px;
+
+            li {
+                margin: 5px 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        background-position: 35%;
+    }
+    
+    .slide-out, 
+    .header-nav {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    header h1 {
+            font-size: 6rem;
+            line-height: 6rem;
+            position: static;
+            align-self: flex-start;
+        }
 }
