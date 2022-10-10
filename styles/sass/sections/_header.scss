@@ -10,39 +10,45 @@ header {
 
 h1 {
     align-self: flex-end;
-    margin: 13rem 0;
+    position: absolute;
+    top: 20%;
+    right: 5%;
 }
 
 .header-nav {
 
-    ul {
+    @include variables.flex-space-between;
+    min-height: 100vh;
+    width: 100%;
+    margin: 2rem 0;
+
+    &-top {
+        width: 40%;
         @include variables.flex-space-between;
-        width: 33%;
-        margin: 2rem 0;
+    }
 
-        a {
-            padding: 2rem;
-            transition: all .4s;
+    a {
+        padding: 2rem;
+        transition: all .4s;
 
-            // @include variables.anchor-text-hover;
-
-            &:hover,
-            &:focus {
-                @include variables.anchor-text-hover;
-            }
+        &:hover,
+        &:focus {
+            @include variables.anchor-text-hover;
         }
     }
-}
+} 
 
 // Header Socials Navigation
 
 .header-socials {
+    align-self: flex-end;
 
     ul {
-        align-items: flex-end;
+        margin-right: -10px;
+        margin-bottom: 40px;
         
         li {
-            margin: 1.5rem 2.5% 1.5rem 0;
+            margin: 15px;
             transition: .3s;
 
             &:hover,
@@ -51,9 +57,10 @@ h1 {
             }
             
             a {
-                width: 3rem;
-                height: 3rem;
-                padding: 1.5rem;
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                padding: 15px; 
             }
         }
 
