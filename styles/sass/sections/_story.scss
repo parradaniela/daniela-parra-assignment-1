@@ -29,7 +29,8 @@
             transition: .3s;
 
             &:hover,
-            &:focus {
+            &:focus,
+            &:active {
                 @include variables.button-hover(variables.$color-black, variables.$color-white);
             }
         }
@@ -80,7 +81,7 @@
 
 @media (max-width: 580px) {
     .stories-text a {
-        width: 50%;
+        width: 60%;
     }
 
     .stories-img {

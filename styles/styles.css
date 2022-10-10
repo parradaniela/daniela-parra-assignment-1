@@ -453,7 +453,7 @@ h1 {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.stories a:hover, .stories a:focus {
+.stories a:hover, .stories a:focus, .stories a:active {
   background-color: #000000;
   color: #FCFCFC;
 }
@@ -504,7 +504,7 @@ h1 {
 }
 @media (max-width: 580px) {
   .stories-text a {
-    width: 50%;
+    width: 60%;
   }
   .stories-img {
     height: 40vh;
@@ -558,7 +558,7 @@ h1 {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-.additional-pages-nav ul li:hover, .additional-pages-nav ul li:focus-within {
+.additional-pages-nav ul li:hover, .additional-pages-nav ul li:focus-within, .additional-pages-nav ul li:active {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -600,7 +600,7 @@ article {
   display: flex;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #141414;
+  background-color: #FCFCFC;
 }
 article .half-container {
   width: 50%;
@@ -629,17 +629,14 @@ article .half-container-text a {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-article .half-container-text a:hover, article .half-container-text a:focus {
+article .half-container-text a:hover, article .half-container-text a:focus, article .half-container-text a:active {
   background-color: #000000;
   color: #FCFCFC;
 }
-article .half-container .flipped {
+article .half-container.flipped {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-}
-article:hover, article:focus-within {
-  background-color: #FCFCFC;
 }
 
 @media (max-width: 1346px) {
@@ -656,7 +653,6 @@ article:hover, article:focus-within {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: #FCFCFC;
   }
   article .half-container {
     width: 100%;
@@ -669,7 +665,7 @@ article:hover, article:focus-within {
     width: 90%;
     margin: 5% auto;
   }
-  article .half-container .flipped {
+  article .half-container.flipped {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
@@ -684,6 +680,14 @@ article:hover, article:focus-within {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .half-container h2 {
+    font-size: 3.5rem;
+  }
+  article .half-container-text a {
+    width: 60%;
   }
 }
 footer {

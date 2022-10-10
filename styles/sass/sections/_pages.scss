@@ -14,7 +14,8 @@
             transition: .3s;
 
             &:hover,
-            &:focus-within {
+            &:focus-within,
+            &:active {
                 transform: scale(1.2);
             }
 

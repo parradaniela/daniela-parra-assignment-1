@@ -3,7 +3,7 @@
 article {
     display: flex;
     transition: .5s;
-    background-color: #141414;
+    background-color: variables.$color-white;
     
     .half-container {
             width: 50%;
@@ -27,21 +27,22 @@ article {
                     transition: .5s;
 
                     &:hover,
-                    &:focus {
+                    &:focus,
+                    &:active {
                         @include variables.button-hover(variables.$color-black, variables.$color-white);
                     }
                 }
             }
             
-            .flipped {
+            &.flipped {
                 order: 2; 
             }
         }       
         
-    &:hover,
-    &:focus-within {
-        background-color: variables.$color-white;
-    }         
+    // &:hover,
+    // &:focus-within {
+    //     background-color: variables.$color-white;
+    // }         
 }
 
 // Media queries
@@ -56,7 +57,6 @@ article {
     article {
         display: flex; 
         flex-direction: column;
-        background-color: variables.$color-white;
 
         .half-container {
             width: 100%;
@@ -71,9 +71,9 @@ article {
                 margin: 5% auto;  
             }
 
-            .flipped {
+            &.flipped {
                 order: 1;
-            }
+            } 
         }
     }
 }
@@ -89,5 +89,16 @@ article {
             text-align: center;
             align-items: center;
         }
+    }
+}
+
+@media (max-width: 500px) {
+
+    .half-container h2 {
+        font-size: 3.5rem;
+    }
+    
+    article .half-container-text a {
+        width: 60%;
     }
 }
