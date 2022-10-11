@@ -1,0 +1,53 @@
+@use "../abstracts/variables";
+
+// Wrapper
+
+.wrapper {
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+// Stripping styles
+
+h1,
+h2,
+h3,
+ul,
+li,
+a,
+p,
+button,
+fieldset {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+fieldset,
+button,
+input {
+    border: none;
+}
+
+// General styles
+
+svg {
+    width: inherit;
+    height: inherit;
+    fill: variables.$color-white;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+

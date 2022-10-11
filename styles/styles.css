@@ -226,10 +226,6 @@ html {
   overflow: hidden;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 .wrapper {
   max-width: 1400px;
   width: 90%;
@@ -274,6 +270,10 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 h1,

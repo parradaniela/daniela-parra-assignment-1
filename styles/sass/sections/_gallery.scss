@@ -1,4 +1,4 @@
-@use "../variables";
+@use "../abstracts/variables";
 
 .gallery {
     background-color: variables.$color-primary-light;

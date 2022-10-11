@@ -1,4 +1,11 @@
-@use "variables";
+@use "../abstracts/variables";
+
+
+// Root font size
+
+html {
+    font-size: 62.5%;
+}
 
 
 // Font styles
