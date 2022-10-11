@@ -28,10 +28,10 @@
             <nav class="slide-out">
                 <ul class="header-nav">
                     <div class="header-nav-top">
-                        <li><a href="#">Home</a></li>
+                        <li><a href="./index.html">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#articles">Blog</a></li>
+                        <li><a href="#footer">Contact</a></li>
                     </div>
                     <!-- Socials navigation -->
                     <li class="header-socials">
@@ -82,16 +82,11 @@
                                     </svg>
                                 </a>
                             </li>
-                        </ul>
-                    </li>
-                </ul>
+                        </ul> <!-- END .flex-column -->
+                    </li> <!-- END .header-socials -->
+                </ul> <!-- END .header-nav -->
             </nav>
-
-        </div> <!-- Close wrapper -->
-        
-        
-        
-        
+        </div> <!-- END .wrapper -->
     </header>
 
     <main>
@@ -105,12 +100,12 @@
                     <h2>Suzie's Story</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius numquam officiis minus quae labore quibusdam pariatur culpa voluptatum nulla non. Commodi, modi nihil incidunt id non illum delectus hic expedita! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas ab totam, labore sit quod itaque? Doloribus adipisci, corrupti ab rem, odit iste delectus molestiae laboriosam atque aspernatur excepturi fugit doloremque.</p>
                     <a href="#">Read More</a>
-                </div>
-            </div>
+                </div> <!-- END .stories-text -->
+            </div> <!-- END .wrapper and .stories-container -->
         </section>
     
         <!-- Gallery section -->
-        <section class="gallery section-padding">
+        <section class="gallery section-padding" id="gallery">
             <div class="wrapper">
                 <h2><span class="block-span">Some of our</span> Friends</h2>
                 <ul class="gallery-container">
@@ -170,7 +165,7 @@
         </section>
     
         <!-- Articles section -->
-        <section class="flex-column">
+        <section class="flex-column" id="articles">
             <article>
                 <div class="half-container flipped">
                     <img src="./animal-land-assets/image-7.jpg" alt="Two grazing zebras, one facing away from the camera, one facing the camera directly">
@@ -194,14 +189,14 @@
             </article>
         </section>
     </main>
-    <footer class="section-padding">
+    <footer class="section-padding" id="footer">
         <div class="wrapper footer-flex">
             <!-- Footer nav -->
             <nav class="footer-nav">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Gallery</a></li>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#articles">Blog</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
